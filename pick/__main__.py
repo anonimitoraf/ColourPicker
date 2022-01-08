@@ -752,10 +752,10 @@ class Main(object):
             "colour": [r, g, b]
         })
 
-        while len(self.history) > 5:
+        while len(self.history) > 30:
             del self.history[0]
             del self.colour_text_labels[0]
-            self.container_vb.get_children()[5].destroy()
+            self.container_vb.get_children()[30].destroy()
 
         if self.empty.get_parent():
             self.empty.get_parent().remove(self.empty)
